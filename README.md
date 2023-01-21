@@ -1,7 +1,5 @@
 # dotfiles
 
-# my-dotfiles
-
 ## Setup
 ```sh
 git init --bare $HOME/dotfiles
