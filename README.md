@@ -1,6 +1,6 @@
 # dotfiles
 
-Collection of dotfiles and confs.
+Collection of dotfiles, confs and MPV Shaders.
 
 ---
 # How i use it
