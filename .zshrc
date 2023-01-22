@@ -101,7 +101,7 @@ alias ll="exa -alh"
 alias tree="exa --tree"
 alias cat="bat --style=auto"
 alias config='/opt/homebrew/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
-
+alias mpv='~/mpv/build/mpv'
 # Add flags to existing aliases.
 #alias ls="${aliases[ls]:-ls} -A"
 
@@ -120,6 +120,11 @@ export PATH=$PATH:~/.asdf/installs/rust/stable/bin/
 
 eval "$(zoxide init zsh)"
 
+export PATH=$PATH:/usr/local/lib
+export PATH=$PATH:/opt/homebrew/lib/
+
+export VK_ICD_FILENAMES=/usr/local/share/vulkan/icd.d/MoltenVK_icd.json
+
 :'
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -135,5 +140,6 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-'
+:'
+# 
 
