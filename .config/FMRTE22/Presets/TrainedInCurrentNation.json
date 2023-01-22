@@ -1,0 +1,15 @@
+{
+  "Actions": [
+    {
+      "Type": "CustomPresetAction",
+      "TargetType": 0,
+      "TargetIds": [],
+      "CustomType": 6,
+      "ExtraParameter": null
+    }
+  ],
+  "Name": "TrainedInCurrentNation",
+  "Category": "Players",
+  "IsActive": true,
+  "Order": 8
+}

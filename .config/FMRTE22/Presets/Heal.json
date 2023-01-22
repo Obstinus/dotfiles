@@ -1,0 +1,63 @@
+{
+  "Actions": [
+    {
+      "Type": "PropertyPresetAction",
+      "TargetProperty": "Condition",
+      "Value": "12720",
+      "ValueSetType": 0,
+      "TargetType": 0,
+      "TargetIds": [],
+      "ExtraParameter": null,
+      "MaximumValue": "0",
+      "MinimumValue": "0"
+    },
+    {
+      "Type": "PropertyPresetAction",
+      "TargetProperty": "MatchSharpness",
+      "Value": "12000",
+      "ValueSetType": 0,
+      "TargetType": 0,
+      "TargetIds": [],
+      "ExtraParameter": null,
+      "MaximumValue": null,
+      "MinimumValue": null
+    },
+    {
+      "Type": "PropertyPresetAction",
+      "TargetProperty": "Jadedness",
+      "Value": "0",
+      "ValueSetType": 0,
+      "TargetType": 0,
+      "TargetIds": [],
+      "ExtraParameter": null,
+      "MaximumValue": null,
+      "MinimumValue": null
+    },
+    {
+      "Type": "PropertyPresetAction",
+      "TargetProperty": "IsInjured",
+      "Value": "False",
+      "ValueSetType": 0,
+      "TargetType": 0,
+      "TargetIds": [],
+      "ExtraParameter": null,
+      "MaximumValue": null,
+      "MinimumValue": null
+    },
+    {
+      "Type": "PropertyPresetAction",
+      "TargetProperty": "PersonalityAttributes.Professional",
+      "Value": "127",
+      "ValueSetType": 0,
+      "TargetType": 0,
+      "TargetIds": [],
+      "ExtraParameter": null,
+      "MaximumValue": "0",
+      "MinimumValue": "0"
+    }
+  ],
+  "Name": "Heal",
+  "Category": "Players",
+  "IsActive": true,
+  "Order": 1
+}

@@ -1,0 +1,15 @@
+{
+  "Actions": [
+    {
+      "Type": "CustomPresetAction",
+      "TargetType": 0,
+      "TargetIds": [],
+      "CustomType": 7,
+      "ExtraParameter": null
+    }
+  ],
+  "Name": "CreateHistoryPoint",
+  "Category": "Players",
+  "IsActive": true,
+  "Order": 9
+}

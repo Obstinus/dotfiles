@@ -1,0 +1,52 @@
+{
+  "Actions": [
+    {
+      "Type": "PropertyPresetAction",
+      "TargetProperty": "Morale",
+      "Value": "20",
+      "ValueSetType": 0,
+      "TargetType": 0,
+      "TargetIds": [],
+      "ExtraParameter": null,
+      "MaximumValue": "0",
+      "MinimumValue": "0"
+    },
+    {
+      "Type": "PropertyPresetAction",
+      "TargetProperty": "Jadedness",
+      "Value": 0,
+      "ValueSetType": 0,
+      "TargetType": 0,
+      "TargetIds": [],
+      "ExtraParameter": null,
+      "MaximumValue": null,
+      "MinimumValue": null
+    },
+    {
+      "Type": "PropertyPresetAction",
+      "TargetProperty": "Contract.NumberOfUnhappinessMotives",
+      "Value": 0,
+      "ValueSetType": 0,
+      "TargetType": 0,
+      "TargetIds": [],
+      "ExtraParameter": null,
+      "MaximumValue": null,
+      "MinimumValue": null
+    },
+    {
+      "Type": "PropertyPresetAction",
+      "TargetProperty": "Contract.Happiness",
+      "Value": 100,
+      "ValueSetType": 0,
+      "TargetType": 0,
+      "TargetIds": [],
+      "ExtraParameter": null,
+      "MaximumValue": null,
+      "MinimumValue": null
+    }
+  ],
+  "Name": "Inspire",
+  "Category": "Players",
+  "IsActive": true,
+  "Order": 2
+}
