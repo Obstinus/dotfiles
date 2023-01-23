@@ -102,6 +102,7 @@ alias tree="exa --tree"
 alias cat="bat --style=auto"
 alias config='/opt/homebrew/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 alias mpv='~/mpv/build/mpv'
+alias icat="kitty +kitten icat"
 # Add flags to existing aliases.
 #alias ls="${aliases[ls]:-ls} -A"
 
@@ -125,21 +126,21 @@ export PATH=$PATH:/opt/homebrew/lib/
 
 export VK_ICD_FILENAMES=/usr/local/share/vulkan/icd.d/MoltenVK_icd.json
 
-:'
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/guirdias/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/guirdias/opt/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/guirdias/opt/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/guirdias/opt/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
+#__conda_setup="$('/Users/guirdias/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+#if [ $? -eq 0 ]; then
+#    eval "$__conda_setup"
+#else
+#    if [ -f "/Users/guirdias/opt/miniconda3/etc/profile.d/conda.sh" ]; then
+#        . "/Users/guirdias/opt/miniconda3/etc/profile.d/conda.sh"
+#    else
+#        export PATH="/Users/guirdias/opt/miniconda3/bin:$PATH"
+#    fi
+#fi
+#unset __conda_setup
 # <<< conda initialize <<<
-:'
-# 
+#:
+ 
 
