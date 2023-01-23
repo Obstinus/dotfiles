@@ -1,2 +1,5 @@
 [core]
 	excludesfile = /Users/guirdias/.gitignore_global
+[user]
+	name = Guilherme Dias
+	mail = guirdias@protonmail.com
