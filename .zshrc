@@ -94,15 +94,36 @@ compdef _directories md
 [[ -z $z4h_win_home ]] || hash -d w=$z4h_win_home
 
 # Define aliases.
+
+## File exploring aliases
 alias tree='tree -a -I .git'
 alias emptytrash='sudo rm -rf ~/.Trash/*'
 alias ls="exa --icons"
 alias ll="exa -alh"
 alias tree="exa --tree"
 alias cat="bat --style=auto"
+
+## Git aliases
+alias gs="git status "
+alias ga="git add "
+alias gb="git branch "
+alias gc="git commit"
+alias gd="git diff"
+alias gco="git checkout"
+alias gk="gitk--all&"
+alias gx="gitx --all"
+
+alias got="git "
+alias get="git "
+
+## dotfiles management alias
 alias config='/opt/homebrew/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
+
+## Misc aliases
+
 alias mpv='~/mpv/build/mpv'
 alias icat="kitty +kitten icat"
+
 # Add flags to existing aliases.
 #alias ls="${aliases[ls]:-ls} -A"
 
