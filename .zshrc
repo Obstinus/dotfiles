@@ -124,6 +124,8 @@ alias config='/opt/homebrew/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 alias mpv='~/mpv/build/mpv'
 alias icat="kitty +kitten icat"
 
+# Ecolé 42
+alias norminette="python ~/norminette/__main__.py"
 # Add flags to existing aliases.
 #alias ls="${aliases[ls]:-ls} -A"
 
