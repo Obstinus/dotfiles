@@ -3,7 +3,7 @@
 	autocrlf = input
 	safecrlf = warn
 [user]
-	name = Guilherme Dias
+	name = Obstinus
   mail = guirdias@protonmail.com
 [alias]
   co = checkout
