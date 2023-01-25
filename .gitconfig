@@ -4,7 +4,6 @@
 	safecrlf = warn
 [user]
 	name = Obstinus
-  mail = guirdias@protonmail.com
 	email = guirdias@protonmail.com
 [alias]
   co = checkout
