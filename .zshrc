@@ -110,7 +110,7 @@ alias gb="git branch "
 alias gc="git commit"
 alias gd="git diff"
 alias gco="git checkout"
-alias gk="gitk--all&"
+alias gk="gitk --all&"
 alias gx="gitx --all"
 
 alias got="git "
@@ -124,8 +124,10 @@ alias config='/opt/homebrew/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 alias mpv='~/mpv/build/mpv'
 alias icat="kitty +kitten icat"
 
-# Ecolé 42
+## Ecolé 42
+
 alias norminette="python ~/norminette/__main__.py"
+
 # Add flags to existing aliases.
 #alias ls="${aliases[ls]:-ls} -A"
 
