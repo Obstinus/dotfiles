@@ -6,16 +6,14 @@ env:
 ##################################
 ############# WINDOWS ############
 ##################################
-
 window:
   #  columns: 0
   #  lines: 0
-  opacity: 0.85
+  opacity: 1.0
 
   #position:
   #  x: 0
   #  y: 0
-
   padding:
     x: 15
     y: 12
@@ -33,35 +31,33 @@ window:
     # General application class
     general: Alacritty
 
-
 ##################################
 ############## FONTS #############
 ##################################
-
 font:
   # Normal (roman) font face
   normal:
     # Font family
-    family: Inconsolata Nerd Font
+    family: FiraCode Nerd Font
     style: Regular
 
   # Bold font face
   bold:
-    family: Inconsolata Nerd Font
+    family: FiraCode Nerd Font
     style: Bold
 
   # Italic font face
   italic:
-    family: Inconsolata Nerd Font
+    family: FiraCode Nerd Font
     style: Italic
 
   # Bold italic font face
   bold_italic:
-    family: Inconsolata Nerd Font
+    family: FiraCode Nerd Font
     style: Bold Italic
 
   # Point size
-  size: 16.0
+  size: 12.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -69,103 +65,113 @@ font:
     x: 0
     y: 4
 
-
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
-
 
 ##################################
 ############# COLORS #############
 ##################################
-
 colors:
-  # Default colors
   primary:
-    background: '0x11111b'
-    foreground: '#ffffff'
+    background: '0x1e2030'
+    foreground: '0x7f85a3'
 
-  # Selection colors
-  selection:
-    text: '#000000'
-    # Normal colors
-    normal:
-      black:   '#5C5F77' # subtext1
-      red:     '#D20F39' # red
-      green:   '#40A02B' # green
-      yellow:  '#DF8E1D' # yellow
-      blue:    '#1E66F5' # blue
-      magenta: '#EA76CB' # pink
-      cyan:    '#179299' # teal
-      white:   '#ACB0BE' # surface2
+  cursor:
+    text: '0x7f85a3'
+    cursor: '0x808080'
 
-    # Bright colors
-    bright:
-      black:   '#6C6F85' # subtext0
-      red:     '#D20F39' # red
-      green:   '#40A02B' # green
-      yellow:  '#DF8E1D' # yellow
-      blue:    '#1E66F5' # blue
-      magenta: '#EA76CB' # pink
-      cyan:    '#179299' # teal
-      white:   '#BCC0CC' # surface1
+  normal:
+    black: '0x444a73'
+    red: '0xff5370'
+    green: '0x4fd6be'
+    yellow: '0xffc777'
+    blue: '0x3e68d7'
+    magenta: '0xfc7b7b'
+    cyan: '0x86e1fc'
+    white: '0xd0d0d0'
 
-    # Dim colors
-    dim:
-      black:   '#5C5F77' # subtext1
-      red:     '#D20F39' # red
-      green:   '#40A02B' # green
-      yellow:  '#DF8E1D' # yellow
-      blue:    '#1E66F5' # blue
-      magenta: '#EA76CB' # pink
-      cyan:    '#179299' # teal
-      white:   '#ACB0BE' # surface2
-
-    indexed_colors:
-      - { index: 16, color: '#FE640B' }
-      - { index: 17, color: '#DC8A78' }
+  bright:
+    black: '0x828bb8'
+    red: '0xff98a4'
+    green: '0xc3e88d'
+    yellow: '0xffc777'
+    blue: '0x82aaff'
+    magenta: '0xff966c'
+    cyan: '0xb4f9f8'
+    white: '0x5f8787'
 
 # Allow terminal applications to change Alacritty's window title.
 dynamic_title: true
 
-
 ##################################
 ############# CURSOR #############
 ##################################
-
 cursor:
-  style: Beam
-
+  style:
+    shape: Beam
+    blinking: Always
+  blink_interval: 500
+  unfocused_hollow: true
+  thickness: 0.15
 
 scrolling:
   # Maximum number of lines in the scrollback buffer.
   # Specifying '0' will disable scrolling.
   history: 5000
 
-
 ##################################
 ########## KEY BINDINGS ##########
 ##################################
-
 key_bindings:
-  - { key: V,         mods: Control,	   action: Paste                       }
-  - { key: C,         mods: Control,	   action: Copy                        }
-  - { key: Paste,     mods: None,          action: Paste                       }
-  - { key: Copy,      mods: None,          action: Copy                        }
-  - { key: Insert,    mods: Shift,         action: PasteSelection              }
-  - { key: Key0,      mods: Control,       action: ResetFontSize               }
-  
-  - { key: Equals,    mods: Control,       action: IncreaseFontSize            }
-  - { key: Plus,      mods: Control,       action: IncreaseFontSize            }
-  - { key: Minus,     mods: Control,       action: DecreaseFontSize            }
+  - { key: V, mods: Control, action: Paste }
+  - { key: C, mods: Control, action: Copy }
+  - { key: Paste, mods: None, action: Paste }
+  - { key: Copy, mods: None, action: Copy }
+  - { key: Insert, mods: Shift, action: PasteSelection }
+  - { key: Key0, mods: Control, action: ResetFontSize }
 
-  - { key: F11,       mods: None,          action: ToggleFullscreen            }
-  - { key: L,         mods: Control,       action: ClearLogNotice              }
-  - { key: L,         mods: Control,       chars: "\x0c"                       }
+  - { key: Equals, mods: Control, action: IncreaseFontSize }
+  - { key: Plus, mods: Control, action: IncreaseFontSize }
+  - { key: Minus, mods: Control, action: DecreaseFontSize }
 
-  - { key: PageUp,    mods: None,          action: ScrollPageUp,   mode: ~Alt  }
-  - { key: PageDown,  mods: None,          action: ScrollPageDown, mode: ~Alt  }
-  - { key: Home,      mods: Shift,         action: ScrollToTop,    mode: ~Alt  }
-  - { key: End,       mods: Shift,         action: ScrollToBottom, mode: ~Alt  }
-  - { key: Down,      mods: Shift,         action: ScrollLineDown, mode: ~Alt  }
-  - { key: Up,        mods: Shift,         action: ScrollLineUp  , mode: ~Alt  }
+  - { key: F11, mods: None, action: ToggleFullscreen }
+  - { key: L, mods: Control, action: ClearLogNotice }
+  - { key: L, mods: Control, chars: "\f" }
 
+  - {
+      key: PageUp,
+      mods: None,
+      action: ScrollPageUp,
+      mode: ~Alt
+    }
+  - {
+      key: PageDown,
+      mods: None,
+      action: ScrollPageDown,
+      mode: ~Alt
+    }
+  - {
+      key: Home,
+      mods: Shift,
+      action: ScrollToTop,
+      mode: ~Alt
+    }
+  - {
+      key: End,
+      mods: Shift,
+      action: ScrollToBottom,
+      mode: ~Alt
+    }
+  - {
+      key: Down,
+      mods: Shift,
+      action: ScrollLineDown,
+      mode: ~Alt
+    }
+  - {
+      key: Up,
+      mods: Shift,
+      action: ScrollLineUp,
+      mode: ~Alt
+    }
+theme: Moonlight-II-VSCode
