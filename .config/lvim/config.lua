@@ -186,4 +186,5 @@ lvim.lsp.installer.setup.automatic_installation = true
 -- })
 
 -- lvim.transparent_window = true
-vim.opt.spelllang = "en"
+vim.opt.fileencodings = "UTF-8"
+vim.opt.timeoutlen = 500
