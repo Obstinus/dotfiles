@@ -48,7 +48,7 @@ zstyle ':z4h:ssh:*' send-extra-files '~/.nanorc' '~/.env.zsh'
 # up-to-date. Cloned files can be used after `z4h init`. This is just an
 # example. If you don't plan to use Oh My Zsh, delete this line.
 z4h install ohmyzsh/ohmyzsh || return
-
+z4h install casonadams/alacritty-shell || return
 # Install or update core components (fzf, zsh-autosuggestions, etc.) and
 # initialize Zsh. After this point console I/O is unavailable until Zsh
 # is fully initialized. Everything that requires user interaction or can
@@ -67,8 +67,7 @@ z4h source ~/.env.zsh
 # Use additional Git repositories pulled in with `z4h install`.
 #
 # This is just an example that you should delete. It does nothing useful.
-z4h source ohmyzsh/ohmyzsh/lib/diagnostics.zsh  # source an individual file
-z4h load   ohmyzsh/ohmyzsh/plugins/emoji-clock  # load a plugin
+z4h load ohmyzsh/ohmyzsh/plugins/emoji-clock  # load a plugin
 
 # Define key bindings.
 z4h bindkey z4h-backward-kill-word  Ctrl+Backspace     Ctrl+H
@@ -96,8 +95,12 @@ compdef _directories md
 # Define aliases.
 
 ## File exploring aliases
-alias tree='tree -a -I .git'
+
+### Remove Trash
 alias emptytrash='sudo rm -rf ~/.Trash/*'
+
+### List and concatenate files
+
 alias ls="exa --icons"
 alias ll="exa -alh"
 alias tree="exa --tree"
@@ -113,59 +116,64 @@ alias gco="git checkout"
 alias gk="gitk --all&"
 alias gx="gitx --all"
 
+### Common mistaken when typing covered
 alias got="git "
 alias get="git "
 
-## dotfiles management alias
+## Dotfiles git bare repository management alias
 alias config='/opt/homebrew/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
+
+## LunarVim alias
+
+alias lv='lvim'
 
 ## Misc aliases
 
+### My MPV Apple Silicon build
+
 alias mpv='~/mpv/build/mpv'
+
+### Image viewer in kitty terminal
 alias icat="kitty +kitten icat"
 
+### Alacritty themes
+
+alias at='alacritty-themes'
+
 ## Ecolé 42
+
+### Norminette
 
 alias norminette="python ~/norminette/__main__.py"
 
 # Add flags to existing aliases.
 #alias ls="${aliases[ls]:-ls} -A"
 
-
 # Set shell options: http://zsh.sourceforge.net/Doc/Release/Options.html.
 setopt glob_dots     # no special treatment for file names with a leading dot
 setopt no_auto_menu  # require an extra TAB press to open the completion menu
 
-# PATH asdf
+# New paths below
+
+## asdf-vm
 . "$HOME/.asdf/asdf.sh"
 
-# Add cargo installs coming from asdf-vm to the command line
+### Add cargo installs coming from asdf-vm to the command line
 export PATH=$PATH:~/.asdf/installs/rust/stable/bin/
 
-# Zoxide
+## Zoxide
 
 eval "$(zoxide init zsh)"
 
-export PATH=$PATH:/usr/local/lib
-export PATH=$PATH:/opt/homebrew/lib/
+## Pager
 
-export VK_ICD_FILENAMES=/usr/local/share/vulkan/icd.d/MoltenVK_icd.json
+export PAGER="most"
 
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-#__conda_setup="$('/Users/guirdias/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-#if [ $? -eq 0 ]; then
-#    eval "$__conda_setup"
-#else
-#    if [ -f "/Users/guirdias/opt/miniconda3/etc/profile.d/conda.sh" ]; then
-#        . "/Users/guirdias/opt/miniconda3/etc/profile.d/conda.sh"
-#    else
-#        export PATH="/Users/guirdias/opt/miniconda3/bin:$PATH"
-#    fi
-#fi
-#unset __conda_setup
-# <<< conda initialize <<<
-#:
- 
+## Enconding
+export LANG="en_US.UTF-8"
+export LC_ALL="POSIX"
 
+## Linux man-pages
+
+lman() { man -M $HOME/man-pages/ "$@" }
