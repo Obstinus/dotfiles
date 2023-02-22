@@ -99,10 +99,12 @@ compdef _directories md
 ### Remove Trash
 alias emptytrash='sudo rm -rf ~/.Trash/*'
 
-### List and concatenate files
+## "ls" to "exa"
 
-alias ls="exa --icons"
-alias ll="exa -alh"
+alias ls="exa -al --color=always --group-directories-first --icons"
+alias la="exa -a --color=always --group-directories-first --icons"
+alias ll="exa -l --color=always --group-directories-first --icons"
+alias lt="exa -aT --color=always --group-directories-first --icons"
 alias tree="exa --tree"
 alias cat="bat --style=auto"
 
@@ -128,7 +130,10 @@ alias config='/opt/homebrew/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
 alias lv='lvim'
 
 ## Misc aliases
+alias vd='python /Users/guirdias/down.py'
+### Linux man-pages
 
+lman() { man -M $HOME/man-pages/ "$@" }
 ### My MPV Apple Silicon build
 
 alias mpv='~/mpv/build/mpv'
@@ -139,6 +144,10 @@ alias icat="kitty +kitten icat"
 ### Alacritty themes
 
 alias at='alacritty-themes'
+
+### NET
+
+alias myip='~/intnet.sh'
 
 ## Ecolé 42
 
@@ -174,6 +183,3 @@ export PAGER="most"
 export LANG="en_US.UTF-8"
 export LC_ALL="POSIX"
 
-## Linux man-pages
-
-lman() { man -M $HOME/man-pages/ "$@" }
