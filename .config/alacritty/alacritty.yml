@@ -73,32 +73,56 @@ draw_bold_text_with_bright_colors: true
 ##################################
 colors:
   primary:
-    background: '0x1e2030'
-    foreground: '0x7f85a3'
-
+    background: '#282a36'
+    foreground: '#f8f8f2'
+    bright_foreground: '#ffffff'
   cursor:
-    text: '0x7f85a3'
-    cursor: '0x808080'
-
+    text: CellBackground
+    cursor: CellForeground
+  vi_mode_cursor:
+    text: CellBackground
+    cursor: CellForeground
+  search:
+    matches:
+      foreground: '#44475a'
+      background: '#50fa7b'
+    focused_match:
+      foreground: '#44475a'
+      background: '#ffb86c'
+    footer_bar:
+      background: '#282a36'
+      foreground: '#f8f8f2'
+  hints:
+    start:
+      foreground: '#282a36'
+      background: '#f1fa8c'
+    end:
+      foreground: '#f1fa8c'
+      background: '#282a36'
+  line_indicator:
+    foreground: None
+    background: None
+  selection:
+    text: CellForeground
+    background: '#44475a'
   normal:
-    black: '0x444a73'
-    red: '0xff5370'
-    green: '0x4fd6be'
-    yellow: '0xffc777'
-    blue: '0x3e68d7'
-    magenta: '0xfc7b7b'
-    cyan: '0x86e1fc'
-    white: '0xd0d0d0'
-
+    black: '#21222c'
+    red: '#ff5555'
+    green: '#50fa7b'
+    yellow: '#f1fa8c'
+    blue: '#bd93f9'
+    magenta: '#ff79c6'
+    cyan: '#8be9fd'
+    white: '#f8f8f2'
   bright:
-    black: '0x828bb8'
-    red: '0xff98a4'
-    green: '0xc3e88d'
-    yellow: '0xffc777'
-    blue: '0x82aaff'
-    magenta: '0xff966c'
-    cyan: '0xb4f9f8'
-    white: '0x5f8787'
+    black: '#6272a4'
+    red: '#ff6e6e'
+    green: '#69ff94'
+    yellow: '#ffffa5'
+    blue: '#d6acff'
+    magenta: '#ff92df'
+    cyan: '#a4ffff'
+    white: '#ffffff'
 
 # Allow terminal applications to change Alacritty's window title.
 dynamic_title: true
@@ -174,4 +198,4 @@ key_bindings:
       action: ScrollLineUp,
       mode: ~Alt
     }
-theme: Moonlight-II-VSCode
+theme: Dracula
