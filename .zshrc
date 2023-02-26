@@ -105,6 +105,7 @@ alias ls="exa -al --color=always --group-directories-first --icons"
 alias la="exa -a --color=always --group-directories-first --icons"
 alias ll="exa -l --color=always --group-directories-first --icons"
 alias lt="exa -aT --color=always --group-directories-first --icons"
+alias lo="exa --reverse --sort=size --long"
 alias tree="exa --tree"
 alias cat="bat --style=auto"
 
@@ -182,4 +183,5 @@ export PAGER="most"
 ## Enconding
 export LANG="en_US.UTF-8"
 export LC_ALL="POSIX"
+export PATH="$(brew --prefix bison)/bin:$PATH"
 
