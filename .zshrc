@@ -184,4 +184,4 @@ export PAGER="most"
 export LANG="en_US.UTF-8"
 export LC_ALL="POSIX"
 export PATH="$(brew --prefix bison)/bin:$PATH"
-
+export RUSTC_WRAPPER="/Users/guirdias/.asdf/installs/rust/stable/bin//sccache"
