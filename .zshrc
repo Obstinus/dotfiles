@@ -108,7 +108,7 @@ alias lt="exa -aT --color=always --group-directories-first --icons"
 alias lo="exa --reverse --sort=size --long"
 alias tree="exa --tree"
 alias cat="bat --style=auto"
-
+alias skp="rg --files | sk --preview='bat {} --color=always'"
 ## Git aliases
 alias gs="git status "
 alias ga="git add "
