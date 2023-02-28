@@ -135,6 +135,7 @@ alias vd='python /Users/guirdias/down.py'
 ### Linux man-pages
 
 lman() { man -M $HOME/man-pages/ "$@" }
+
 ### My MPV Apple Silicon build
 
 alias mpv='~/mpv/build/mpv'
@@ -150,12 +151,6 @@ alias at='alacritty-themes'
 
 alias myip='~/intnet.sh'
 
-## Ecolé 42
-
-### Norminette
-
-alias norminette="python ~/norminette/__main__.py"
-
 # Add flags to existing aliases.
 #alias ls="${aliases[ls]:-ls} -A"
 
@@ -169,7 +164,7 @@ setopt no_auto_menu  # require an extra TAB press to open the completion menu
 . "$HOME/.asdf/asdf.sh"
 
 ### Add cargo installs coming from asdf-vm to the command line
-export PATH=$PATH:~/.asdf/installs/rust/stable/bin/
+export PATH=$PATH:~/.asdf/installs/rust/1.67.1/bin/
 
 ## Zoxide
 
@@ -183,5 +178,5 @@ export PAGER="most"
 ## Enconding
 export LANG="en_US.UTF-8"
 export LC_ALL="POSIX"
-export PATH="$(brew --prefix bison)/bin:$PATH"
-export RUSTC_WRAPPER="/Users/guirdias/.asdf/installs/rust/stable/bin//sccache"
+export RUSTC_WRAPPER="/Users/guirdias/.asdf/installs/rust/1.67.1/bin//sccache"
+export EDITOR='lvim'
